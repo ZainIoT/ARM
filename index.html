@@ -39,34 +39,34 @@
         </script>
         
         <!-- Put them above docsify.min.js -->
-        <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-        <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
+            <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+            <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
         <!-- 复制到剪贴板 -->
-        <script src="//unpkg.com/docsify-copy-code"></script>
+            <script src="//unpkg.com/docsify-copy-code"></script>
         <!-- 高亮代码块 -->
-        <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
-        <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
+            <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+            <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
         <!-- LaTex公式显示 -->
-        <!-- CDN files for docsify-katex -->
-        <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-        <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
+            <!-- CDN files for docsify-katex -->
+            <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+            <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
+            <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
         <!-- 评论功能 -->
-        <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
-        <!-- <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script> -->
-        <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
-        <script>
-            const gitalk = new Gitalk({
-                clientID: '{{theme.gitalk.clientID}}',
-                clientSecret: '{{theme.gitalk.clientSecret}}',
-                repo: '{{theme.gitalk.repo}}',
-                owner: '{{theme.gitalk.owner}}',
-                admin: '{{theme.gitalk.admin}}'.split(','),
-                id: '{{ page.date }}', // #这个是基于文章时间创建 Issues ，默认是以文章标题作为标签创建 Issues 会导致长标题初始化失败。
-                pagerDirection: '{{theme.gitalk.pagerDirection}}',
-                // facebook-like distraction free mode
-                distractionFreeMode: false
-            })
-        </script>
+            <!-- <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
+            <script src="//unpkg.com/docsify/lib/plugins/gitalk.min.js"></script>
+            <script src="//unpkg.com/gitalk/dist/gitalk.min.js"></script>
+            <script>
+                const gitalk = new Gitalk({
+                    clientID: '{{theme.gitalk.clientID}}',
+                    clientSecret: '{{theme.gitalk.clientSecret}}',
+                    repo: '{{theme.gitalk.repo}}',
+                    owner: '{{theme.gitalk.owner}}',
+                    admin: '{{theme.gitalk.admin}}'.split(','),
+                    id: '{{page.date}}',
+                    pagerDirection: '{{theme.gitalk.pagerDirection}}',
+                    // facebook-like distraction free mode
+                    distractionFreeMode: false
+                })
+            </script> -->
     </body>
 </html>
