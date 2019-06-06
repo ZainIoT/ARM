@@ -33,7 +33,10 @@
 6. 具有固化在非易失性存储器中的代码
 7. 嵌入式系统开发工作和环境
 
-```diff
-- dsjalkjld  djsklaj  dsal
-+ djksajl djskla jlj dsa
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
 ```
