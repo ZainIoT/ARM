@@ -1,27 +1,33 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html>
-<head>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta charset="UTF-8">
-  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
-</head>
-<body>
-  <div id="app">loading...</div>
-  <script>
-    window.$docsify = {
-      loadSidebar: 'SUMMARY.md',
-      repo: 'https://github.com/docsifyjs/docsify/',
-      name: '嵌入式系统',
-      auto2top: true,
-    }
-  </script>
-  <!-- CDN files for docsify-katex -->
-  <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
-  <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex/dist/docsify-katex.js"></script> -->
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-  <!-- Put them above docsify.min.js -->
-  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-</body>
+    <head>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+    </head>
+    <body>
+        <div id="app">loading...</div>
+        <script>
+        window.$docsify = {
+            name: '嵌入式系统',                        // 侧边栏顶部名字
+            repo: 'https://github.com/ZainIoT/ARM',   // 右上角GitHub项目路径
+
+            loadSidebar: 'SUMMARY.md',                // 侧边栏目录文件
+            subMaxLevel: 3,                           // md文件的三级以上标题显示在侧边栏
+
+            auto2top: true,
+        }
+        </script>
+        <!-- CDN files for docsify-katex -->
+        <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
+        <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex/dist/docsify-katex.js"></script> -->
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
+        <!-- Put them above docsify.min.js -->
+        <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+        <!-- 高亮代码块 -->
+        <script src="//unpkg.com/prismjs/components/prism-bash.min.js"></script>
+        <script src="//unpkg.com/prismjs/components/prism-php.min.js"></script>
+    </body>
 </html>
