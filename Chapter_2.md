@@ -58,9 +58,9 @@ ARM体系结构可以用**两种方法存储字数据**，称之为**大端格�
 
 **下面我将使用一个详细的示例来解释两种存储格式**：
 32位的整数0x12345678存放到一个整型变量（int）中，这个整型变量采用大端或者小端格式在内存中的存储由下表所示。使用Byte_3表示一个32位数据的最高字节，使用Byte_0表示一个32位数据最低字节。
-|||
-|:--:|:--:|:--:|
+
 |地址|大端模式|小端模式|
+|:--:|:--:|:--:|
 0x00（低地址）|12（Byte_3）|78（Byte_0）
 0x01<kbd>&darr;</kbd>|34（Byte_2）|56（Byte_1）
 0x02<kbd>&darr;</kbd>|56（Byte_1）|34（Byte_2）
@@ -78,26 +78,3 @@ ARM微处理器支持7中运行模式：
 7. und<kbd>&rarr;</kbd>**未定义指令终止模式**：当未定义的指令执行时进入该模式，可用于支持硬件协处理器的软件仿真。
 
 <div id="diagram">Diagram will be placed here</div>
-<script src="flowchart.js"></script>
-<script>
-    var diagram = flowchart.parse('st=>start: Start:>http://www.google.com[blank]\n' +
-                                'e=>end:>http://www.google.com\n' +
-                                'op1=>operation: My Operation:$myFunction\n' +
-                                'op2=>operation: Stuff|current\n' +
-                                'sub1=>subroutine: My Subroutine\n' +
-                                'cond=>condition: Yes \n' + // use cond(align-next=no) to disable vertical align of symbols below
-                                'or No?\n:>http://www.google.com\n' +
-                                'c2=>condition: Good idea|rejected\n' +
-                                'io=>inputoutput: catch something...|request\n' +
-                                '\n' +
-                                'st->op1(right)->cond\n' +
-                                'cond(yes, right)->c2\n' + // conditions can also be redirected like cond(yes, bottom) or cond(yes, right)
-                                'cond(no)->sub1(left)->op1\n' + // the other symbols too...
-                                'c2(true)->io->e\n' +
-                                'c2(false)->op2->e'  //allow for true and false in conditionals
-                                );
-    diagram.drawSVG('diagram');
-    function myFunction(event, node) {
-        console.log("You just clicked this node:", node);
-    }
-</script>
