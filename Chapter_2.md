@@ -77,3 +77,20 @@ ARM微处理器支持7中运行模式：
 6. sys<kbd>&rarr;</kbd>**系统模式**：运行具有特权的操作系统任务；
 7. und<kbd>&rarr;</kbd>**未定义指令终止模式**：当未定义的指令执行时进入该模式，可用于支持硬件协处理器的软件仿真。
 
+```flow
+st=>start: Start|past:>http://www.google.com[blank]
+e=>end: End|future:>http://www.google.com
+op1=>operation: My Operation|past
+op2=>operation: Stuff|current
+sub1=>subroutine: My Subroutine|invalid
+cond=>condition: Yes
+or No?|approved:>http://www.google.com
+c2=>condition: Good idea|rejected
+io=>inputoutput: catch something...|future
+
+st->op1(right)->cond
+cond(yes, right)->c2
+cond(no)->sub1(left)->op1
+c2(yes)->io->e
+c2(no)->op2->e
+```
