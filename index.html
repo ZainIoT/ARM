@@ -35,6 +35,14 @@
                     '/': '搜索',// Search
                 }
             },
+            tabs: {
+                persist: true,      // 确定在页面刷新/重新访问之后是否还原选项卡选择。
+                sync: false,        // 确定标签选择是否将跨标签与匹配标签同步。
+                theme: 'classic',   // 主题
+                // 标题选项卡的定义方式，两种，可同时启用
+                tabComments: true,  // 确定是否可以使用选项卡注释定义选项卡集中的选项卡。
+                tabHeadings: true,  // 确定是否可以使用标题 + 粗体标记来定义选项卡集中的选项卡。
+            }
         }
         </script>
         
@@ -51,7 +59,7 @@
             <script src="//cdn.jsdelivr.net/npm/docsify-katex@latest/dist/docsify-katex.js"></script>
             <!-- or <script src="//cdn.jsdelivr.net/gh/upupming/docsify-katex@latest/dist/docsify-katex.js"></script> -->
             <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
-        <!-- tab显示 -->
+        <!-- 像表格一样，显示多个文件 -->
             <script src="https://cdn.jsdelivr.net/npm/docsify-tabs@1"></script>
         <!-- 评论功能 -->
             <!-- <link rel="stylesheet" href="//unpkg.com/gitalk/dist/gitalk.css">
