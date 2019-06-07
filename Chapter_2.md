@@ -2,7 +2,7 @@
 
 ## 2.1 ARM微处理器概述
 
-**ARM（advanced RISC machines）**有三种含义：
+**ARM（advanced RISC machines）** 有三种含义：
 
 1. 它是一个**公司名称**
 2. 是一类微处理器的**通称**
@@ -34,3 +34,8 @@ ARM处理器共有 **37** 个寄存器，被分为若干个组（BANK）
 > * **ARM状态**    此时处理器执行**32**位的**字对齐**的ARM指令
 > * **Thumb状态**  此时处理器执行**16**位的**半字对齐**的Thumb指令
 > <p style="color:red">注意：ARM处理器在开始执行代码时，应处于ARM状态！！！</p>
+
+* 进入 Thumb 状态：
+  当操作数寄存器的状态位（位0）为1时，可采用执行 BX 指令的方法，使微处理器从
+
+[Closer](Closer.mp3 ':include :type=audio width=100% height=400px')
