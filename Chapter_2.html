@@ -1,0 +1,606 @@
+<!DOCTYPE html><html><head>
+      <title>Chapter_2</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+      <link rel="stylesheet" href="file:///C:\Users\Zain_\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.4.1\node_modules\@shd101wyy\mume\dependencies\katex\katex.min.css">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <style> 
+      /**
+ * prism.js Github theme based on GitHub's theme.
+ * @author Sam Clarke
+ */
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #333;
+  background: none;
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  word-break: normal;
+  word-wrap: normal;
+  line-height: 1.4;
+
+  -moz-tab-size: 8;
+  -o-tab-size: 8;
+  tab-size: 8;
+
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+  padding: .8em;
+  overflow: auto;
+  /* border: 1px solid #ddd; */
+  border-radius: 3px;
+  /* background: #fff; */
+  background: #f5f5f5;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+  padding: .1em;
+  border-radius: .3em;
+  white-space: normal;
+  background: #f5f5f5;
+}
+
+.token.comment,
+.token.blockquote {
+  color: #969896;
+}
+
+.token.cdata {
+  color: #183691;
+}
+
+.token.doctype,
+.token.punctuation,
+.token.variable,
+.token.macro.property {
+  color: #333;
+}
+
+.token.operator,
+.token.important,
+.token.keyword,
+.token.rule,
+.token.builtin {
+  color: #a71d5d;
+}
+
+.token.string,
+.token.url,
+.token.regex,
+.token.attr-value {
+  color: #183691;
+}
+
+.token.property,
+.token.number,
+.token.boolean,
+.token.entity,
+.token.atrule,
+.token.constant,
+.token.symbol,
+.token.command,
+.token.code {
+  color: #0086b3;
+}
+
+.token.tag,
+.token.selector,
+.token.prolog {
+  color: #63a35c;
+}
+
+.token.function,
+.token.namespace,
+.token.pseudo-element,
+.token.class,
+.token.class-name,
+.token.pseudo-class,
+.token.id,
+.token.url-reference .token.variable,
+.token.attr-name {
+  color: #795da3;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token.title,
+.token.title .token.punctuation {
+  font-weight: bold;
+  color: #1d3e81;
+}
+
+.token.list {
+  color: #ed6a43;
+}
+
+.token.inserted {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+.token.deleted {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+.token.bold {
+  font-weight: bold;
+}
+
+.token.italic {
+  font-style: italic;
+}
+
+
+/* JSON */
+.language-json .token.property {
+  color: #183691;
+}
+
+.language-markup .token.tag .token.punctuation {
+  color: #333;
+}
+
+/* CSS */
+code.language-css,
+.language-css .token.function {
+  color: #0086b3;
+}
+
+/* YAML */
+.language-yaml .token.atrule {
+  color: #63a35c;
+}
+
+code.language-yaml {
+  color: #183691;
+}
+
+/* Ruby */
+.language-ruby .token.function {
+  color: #333;
+}
+
+/* Markdown */
+.language-markdown .token.url {
+  color: #795da3;
+}
+
+/* Makefile */
+.language-makefile .token.symbol {
+  color: #795da3;
+}
+
+.language-makefile .token.variable {
+  color: #183691;
+}
+
+.language-makefile .token.builtin {
+  color: #0086b3;
+}
+
+/* Bash */
+.language-bash .token.keyword {
+  color: #0086b3;
+}
+
+/* highlight */
+pre[data-line] {
+  position: relative;
+  padding: 1em 0 1em 3em;
+}
+pre[data-line] .line-highlight-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+  display: block;
+  width: 100%;
+}
+
+pre[data-line] .line-highlight {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: inherit 0;
+  margin-top: 1em;
+  background: hsla(24, 20%, 50%,.08);
+  background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
+  pointer-events: none;
+  line-height: inherit;
+  white-space: pre;
+}
+
+pre[data-line] .line-highlight:before, 
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-start);
+  position: absolute;
+  top: .4em;
+  left: .6em;
+  min-width: 1em;
+  padding: 0 .5em;
+  background-color: hsla(24, 20%, 50%,.4);
+  color: hsl(24, 20%, 95%);
+  font: bold 65%/1.5 sans-serif;
+  text-align: center;
+  vertical-align: .3em;
+  border-radius: 999px;
+  text-shadow: none;
+  box-shadow: 0 1px white;
+}
+
+pre[data-line] .line-highlight[data-end]:after {
+  content: attr(data-end);
+  top: auto;
+  bottom: .4em;
+}html body{font-family:"Helvetica Neue",Helvetica,"Segoe UI",Arial,freesans,sans-serif;font-size:16px;line-height:1.6;color:#333;background-color:#fff;overflow:initial;box-sizing:border-box;word-wrap:break-word}html body>:first-child{margin-top:0}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{line-height:1.2;margin-top:1em;margin-bottom:16px;color:#000}html body h1{font-size:2.25em;font-weight:300;padding-bottom:.3em}html body h2{font-size:1.75em;font-weight:400;padding-bottom:.3em}html body h3{font-size:1.5em;font-weight:500}html body h4{font-size:1.25em;font-weight:600}html body h5{font-size:1.1em;font-weight:600}html body h6{font-size:1em;font-weight:600}html body h1,html body h2,html body h3,html body h4,html body h5{font-weight:600}html body h5{font-size:1em}html body h6{color:#5c5c5c}html body strong{color:#000}html body del{color:#5c5c5c}html body a:not([href]){color:inherit;text-decoration:none}html body a{color:#08c;text-decoration:none}html body a:hover{color:#00a3f5;text-decoration:none}html body img{max-width:100%}html body>p{margin-top:0;margin-bottom:16px;word-wrap:break-word}html body>ul,html body>ol{margin-bottom:16px}html body ul,html body ol{padding-left:2em}html body ul.no-list,html body ol.no-list{padding:0;list-style-type:none}html body ul ul,html body ul ol,html body ol ol,html body ol ul{margin-top:0;margin-bottom:0}html body li{margin-bottom:0}html body li.task-list-item{list-style:none}html body li>p{margin-top:0;margin-bottom:0}html body .task-list-item-checkbox{margin:0 .2em .25em -1.8em;vertical-align:middle}html body .task-list-item-checkbox:hover{cursor:pointer}html body blockquote{margin:16px 0;font-size:inherit;padding:0 15px;color:#5c5c5c;border-left:4px solid #d6d6d6}html body blockquote>:first-child{margin-top:0}html body blockquote>:last-child{margin-bottom:0}html body hr{height:4px;margin:32px 0;background-color:#d6d6d6;border:0 none}html body table{margin:10px 0 15px 0;border-collapse:collapse;border-spacing:0;display:block;width:100%;overflow:auto;word-break:normal;word-break:keep-all}html body table th{font-weight:bold;color:#000}html body table td,html body table th{border:1px solid #d6d6d6;padding:6px 13px}html body dl{padding:0}html body dl dt{padding:0;margin-top:16px;font-size:1em;font-style:italic;font-weight:bold}html body dl dd{padding:0 16px;margin-bottom:16px}html body code{font-family:Menlo,Monaco,Consolas,'Courier New',monospace;font-size:.85em !important;color:#000;background-color:#f0f0f0;border-radius:3px;padding:.2em 0}html body code::before,html body code::after{letter-spacing:-0.2em;content:"\00a0"}html body pre>code{padding:0;margin:0;font-size:.85em !important;word-break:normal;white-space:pre;background:transparent;border:0}html body .highlight{margin-bottom:16px}html body .highlight pre,html body pre{padding:1em;overflow:auto;font-size:.85em !important;line-height:1.45;border:#d6d6d6;border-radius:3px}html body .highlight pre{margin-bottom:0;word-break:normal}html body pre code,html body pre tt{display:inline;max-width:initial;padding:0;margin:0;overflow:initial;line-height:inherit;word-wrap:normal;background-color:transparent;border:0}html body pre code:before,html body pre tt:before,html body pre code:after,html body pre tt:after{content:normal}html body p,html body blockquote,html body ul,html body ol,html body dl,html body pre{margin-top:0;margin-bottom:16px}html body kbd{color:#000;border:1px solid #d6d6d6;border-bottom:2px solid #c7c7c7;padding:2px 4px;background-color:#f0f0f0;border-radius:3px}@media print{html body{background-color:#fff}html body h1,html body h2,html body h3,html body h4,html body h5,html body h6{color:#000;page-break-after:avoid}html body blockquote{color:#5c5c5c}html body pre{page-break-inside:avoid}html body table{display:table}html body img{display:block;max-width:100%;max-height:100%}html body pre,html body code{word-wrap:break-word;white-space:pre}}.markdown-preview{width:100%;height:100%;box-sizing:border-box}.markdown-preview .pagebreak,.markdown-preview .newpage{page-break-before:always}.markdown-preview pre.line-numbers{position:relative;padding-left:3.8em;counter-reset:linenumber}.markdown-preview pre.line-numbers>code{position:relative}.markdown-preview pre.line-numbers .line-numbers-rows{position:absolute;pointer-events:none;top:1em;font-size:100%;left:0;width:3em;letter-spacing:-1px;border-right:1px solid #999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.markdown-preview pre.line-numbers .line-numbers-rows>span{pointer-events:none;display:block;counter-increment:linenumber}.markdown-preview pre.line-numbers .line-numbers-rows>span:before{content:counter(linenumber);color:#999;display:block;padding-right:.8em;text-align:right}.markdown-preview .mathjax-exps .MathJax_Display{text-align:center !important}.markdown-preview:not([for="preview"]) .code-chunk .btn-group{display:none}.markdown-preview:not([for="preview"]) .code-chunk .status{display:none}.markdown-preview:not([for="preview"]) .code-chunk .output-div{margin-bottom:16px}.scrollbar-style::-webkit-scrollbar{width:8px}.scrollbar-style::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}.scrollbar-style::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode]){position:relative;width:100%;height:100%;top:0;left:0;margin:0;padding:0;overflow:auto}html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{position:relative;top:0}@media screen and (min-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em calc(50% - 457px + 2em)}}@media screen and (max-width:914px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode]) .markdown-preview{font-size:14px !important;padding:1em}}@media print{html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{display:none}}html body[for="html-export"]:not([data-presentation-mode]) #sidebar-toc-btn{position:fixed;bottom:8px;left:8px;font-size:28px;cursor:pointer;color:inherit;z-index:99;width:32px;text-align:center;opacity:.4}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] #sidebar-toc-btn{opacity:1}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc{position:fixed;top:0;left:0;width:300px;height:100%;padding:32px 0 48px 0;font-size:14px;box-shadow:0 0 4px rgba(150,150,150,0.33);box-sizing:border-box;overflow:auto;background-color:inherit}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar{width:8px}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-track{border-radius:10px;background-color:transparent}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc::-webkit-scrollbar-thumb{border-radius:5px;background-color:rgba(150,150,150,0.66);border:4px solid rgba(150,150,150,0.66);background-clip:content-box}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc a{text-decoration:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{padding:0 1.6em;margin-top:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc li{margin-bottom:.8em}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .md-sidebar-toc ul{list-style-type:none}html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{left:300px;width:calc(100% -  300px);padding:2em calc(50% - 457px -  150px);margin:0;box-sizing:border-box}@media screen and (max-width:1274px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{padding:2em}}@media screen and (max-width:450px){html body[for="html-export"]:not([data-presentation-mode])[html-show-sidebar-toc] .markdown-preview{width:100%}}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .markdown-preview{left:50%;transform:translateX(-50%)}html body[for="html-export"]:not([data-presentation-mode]):not([html-show-sidebar-toc]) .md-sidebar-toc{display:none}
+/* Please visit the URL below for more information: */
+/* https://shd101wyy.github.io/markdown-preview-enhanced/#/customize-css */
+.markdown-preview.markdown-preview {
+  /*================此属性为全局================*/
+  color: #1f1f1f;
+  font-size: 15px;
+  line-height: 1.8;
+  word-spacing: 2px;
+  letter-spacing: 1.3px;
+  font-family: "Consolas", "宋体", "微软雅黑";
+  background-image: linear-gradient(90deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%), linear-gradient(360deg, rgba(50, 0, 0, 0.05) 3%, rgba(0, 0, 0, 0) 3%);
+  background-size: 20px 20px;
+  background-position: center center;
+  /*================段落================*/
+  /*================标题================*/
+  /*================超链接================*/
+  /*================强调================*/
+  /*================斜体================*/
+  /*================删除线================*/
+  /*================强调的斜体================*/
+  /*================注脚================*/
+  /*================分隔线================*/
+  /*================引用块================*/
+  /*================列表================*/
+  /*================代码================*/
+  /*================图像================*/
+  /*================表格开始================*/
+  /*================数学公式开始================*/
+  /*================任务列表开始================*/
+  /*================目录生成================*/
+  /*================marmaid图================*/
+  /*================导出样式定义================*/
+}
+.markdown-preview.markdown-preview p {
+  margin: 1em 0px 1em;
+}
+.markdown-preview.markdown-preview h1,
+.markdown-preview.markdown-preview h2,
+.markdown-preview.markdown-preview h3,
+.markdown-preview.markdown-preview h4,
+.markdown-preview.markdown-preview h5,
+.markdown-preview.markdown-preview h6 {
+  margin: 1.6em 0px 1em;
+  font-weight: bold;
+}
+.markdown-preview.markdown-preview h1 {
+  font-size: 1.6em;
+}
+.markdown-preview.markdown-preview h2 {
+  font-size: 1.4em;
+}
+.markdown-preview.markdown-preview h3 {
+  font-size: 1.3em;
+}
+.markdown-preview.markdown-preview h4 {
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview h5 {
+  font-size: 1.1em;
+}
+.markdown-preview.markdown-preview h6 {
+  font-size: 1em;
+}
+.markdown-preview.markdown-preview h1 {
+  border-bottom: 4px solid #EF7060;
+}
+.markdown-preview.markdown-preview h2 {
+  border-bottom: 3px solid #EF7060;
+}
+.markdown-preview.markdown-preview h3 {
+  border-bottom: 2px solid #EF7060;
+}
+.markdown-preview.markdown-preview h3 span {
+  display: inline-block;
+  font-weight: normal;
+  background: #EF7060;
+  color: #ffffff;
+  padding: 10px 10px 1px;
+  border-top-right-radius: 3px;
+  border-top-left-radius: 3px;
+  margin-right: 3px;
+}
+.markdown-preview.markdown-preview h3:after {
+  display: inline-block;
+  content: " ";
+  margin-left: -3px;
+  vertical-align: bottom;
+  border-bottom: 33px solid #EFEBE9;
+  border-right: 20px solid transparent;
+}
+.markdown-preview.markdown-preview a {
+  text-decoration: none;
+  color: #175199;
+  word-wrap: normal;
+}
+.markdown-preview.markdown-preview a:hover {
+  text-decoration: underline;
+  color: #0050a3;
+}
+.markdown-preview.markdown-preview a:active {
+  text-decoration: underline;
+  color: #1f1f1f;
+  word-wrap: normal;
+}
+.markdown-preview.markdown-preview strong {
+  font-weight: bold;
+  color: #e95500;
+}
+.markdown-preview.markdown-preview em {
+  font-style: italic;
+  color: #2962FF;
+}
+.markdown-preview.markdown-preview s {
+  color: #2962FF;
+}
+.markdown-preview.markdown-preview strong em {
+  font-weight: bold;
+  color: #C51162;
+}
+.markdown-preview.markdown-preview a[href^="#"] sup {
+  vertical-align: super;
+  margin: 0 2px;
+  padding: 1px 3px;
+  color: #ffffff;
+  background: #666666;
+  font-size: 0.7em;
+}
+.markdown-preview.markdown-preview hr {
+  height: 1px;
+  background: #ececec;
+  margin: 1.5rem -10px;
+  border: none;
+  border-top: 1px dashed #a3a3a3;
+}
+.markdown-preview.markdown-preview blockquote {
+  color: #636363;
+  background: #F5F5F5;
+  display: block;
+  font-size: 0.9em;
+  margin: 1.5em 0;
+  padding: 15px 1rem 15px 15px;
+  border-left: 3px solid #EF7060;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  word-wrap: normal;
+  word-break: normal;
+}
+.markdown-preview.markdown-preview blockquote p {
+  margin: 0px;
+}
+.markdown-preview.markdown-preview ul,
+.markdown-preview.markdown-preview ol {
+  padding-left: 2em;
+  margin: 0 0 0 1em;
+}
+.markdown-preview.markdown-preview ol {
+  list-style-type: decimal;
+}
+.markdown-preview.markdown-preview ul {
+  list-style-type: disc;
+}
+.markdown-preview.markdown-preview li {
+  margin-bottom: 0.3em;
+}
+.markdown-preview.markdown-preview code {
+  color: #292929;
+  background: #f8f8f8;
+  word-wrap: break-word;
+  padding: 3px 3px;
+  border-radius: 4px;
+  margin: 0 2px;
+}
+.markdown-preview.markdown-preview pre span {
+  font-family: Consolas, Inconsolata, Courier, monospace;
+  font-size: 16px;
+  line-height: 19px;
+  font-weight: normal;
+  word-spacing: 0px;
+  letter-spacing: 0px;
+}
+.markdown-preview.markdown-preview span.line-numbers-rows {
+  border-radius: 0px;
+}
+.markdown-preview.markdown-preview span.line-numbers-rows span:before {
+  color: #7a7a7a;
+}
+.markdown-preview.markdown-preview img {
+  display: block;
+  margin: 0px auto;
+  max-width: 100%;
+  box-shadow: #868686 0px 0px 10px;
+}
+.markdown-preview.markdown-preview figcaption {
+  margin-top: 0px;
+  text-align: center;
+  color: #646464;
+  font-size: 0.8em;
+}
+.markdown-preview.markdown-preview table {
+  display: table;
+  width: 100% ;
+  text-align: center;
+}
+.markdown-preview.markdown-preview tbody {
+  border: 0;
+}
+.markdown-preview.markdown-preview table tr {
+  border: 0;
+  border-top: 1px solid #CCC;
+  background-color: white;
+}
+.markdown-preview.markdown-preview table tr:nth-child(2n) {
+  background-color: #F8F8F8;
+}
+.markdown-preview.markdown-preview table tr th,
+.markdown-preview.markdown-preview table tr td {
+  font-size: 1em;
+  border: 1px solid #CCC;
+  padding: 0.5em 1em;
+  text-align: center;
+}
+.markdown-preview.markdown-preview table tr th {
+  font-weight: bold;
+  background-color: #F0F0F0;
+}
+.markdown-preview.markdown-preview .katex-display {
+  font-size: 1.2em;
+}
+.markdown-preview.markdown-preview .katex-display > .katex {
+  display: inline-block;
+  text-align: center;
+  padding: 10px;
+}
+.markdown-preview.markdown-preview .katex {
+  padding: 10px 3px;
+}
+.markdown-preview.markdown-preview .katex img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.markdown-preview.markdown-preview .task-list-list {
+  list-style-type: none;
+}
+.markdown-preview.markdown-preview .task-list-list.checked {
+  color: #3e3e3e;
+}
+.markdown-preview.markdown-preview .task-list-list.uncheck {
+  color: #bfc1bf;
+}
+.markdown-preview.markdown-preview .task-list-list .icon_uncheck,
+.markdown-preview.markdown-preview .task-list-list .icon_check {
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.markdown-preview.markdown-preview .task-list-list .icon_check:before {
+  content: "√";
+  border: 2px solid #3e3e3e;
+  color: red;
+}
+.markdown-preview.markdown-preview .task-list-list .icon_uncheck:before {
+  content: "x";
+  border: 2px solid #bfc1bf;
+  color: #bfc1bf;
+}
+.markdown-preview.markdown-preview .task-list-list .icon_check:before,
+.markdown-preview.markdown-preview .task-list-list .icon_uncheck:before {
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 8px;
+  border-radius: 5px;
+}
+.markdown-preview.markdown-preview .toc {
+  margin-left: 25px;
+}
+.markdown-preview.markdown-preview .toc_item {
+  display: block;
+}
+.markdown-preview.markdown-preview .toc_left {
+  margin-left: 1em;
+}
+.markdown-preview.markdown-preview ul ul {
+  padding-left: 1em;
+}
+.markdown-preview.markdown-preview div > svg {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+ 
+      </style>
+    </head>
+    <body for="html-export">
+      <div class="mume markdown-preview  ">
+      <h1 class="mume-header" id="span2-arm%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E6%A6%82%E8%BF%B0%E4%B8%8E%E7%BC%96%E7%A8%8B%E6%A8%A1%E5%9E%8B"><span>2 ARM&#x5FAE;&#x5904;&#x7406;&#x5668;&#x6982;&#x8FF0;&#x4E0E;&#x7F16;&#x7A0B;&#x6A21;&#x578B;</span></h1>
+
+<h2 class="mume-header" id="span21-arm%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E6%A6%82%E8%BF%B0"><span>2.1 ARM&#x5FAE;&#x5904;&#x7406;&#x5668;&#x6982;&#x8FF0;</span></h2>
+
+<p>**ARM&#xFF08;advanced RISC machines&#xFF09;**&#x6709;&#x4E09;&#x79CD;&#x542B;&#x4E49;&#xFF1A;</p>
+<ol>
+<li>&#x5B83;&#x662F;&#x4E00;&#x4E2A;<strong>&#x516C;&#x53F8;&#x540D;&#x79F0;</strong></li>
+<li>&#x662F;&#x4E00;&#x7C7B;&#x5FAE;&#x5904;&#x7406;&#x5668;&#x7684;<strong>&#x901A;&#x79F0;</strong></li>
+<li>&#x662F;&#x4E00;&#x79CD;<strong>&#x6280;&#x672F;&#x7684;&#x540D;&#x79F0;</strong></li>
+</ol>
+<h3 class="mume-header" id="span211-arm%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E7%89%B9%E7%82%B9"><span>2.1.1 ARM&#x5FAE;&#x5904;&#x7406;&#x5668;&#x7684;&#x7279;&#x70B9;</span></h3>
+
+<p>&#x91C7;&#x7528;RSIC&#x67B6;&#x6784;&#x7684;ARM&#x5FAE;&#x5904;&#x7406;&#x5668;&#x6709;&#x5982;&#x4E0B;&#x7279;&#x70B9;&#xFF1A;</p>
+<ol>
+<li>&#x4F53;&#x79EF;&#x5C0F;&#x3001;&#x4F4E;&#x529F;&#x8017;&#x3001;&#x4F4E;&#x6210;&#x672C;&#x3001;&#x9AD8;&#x6027;&#x80FD;&#xFF1B;</li>
+<li>&#x652F;&#x6301;Thumb&#xFF08;16&#x4F4D;&#xFF09;/ARM&#xFF08;32&#x4F4D;&#xFF09;&#x53CC;&#x6307;&#x4EE4;&#x96C6;&#xFF0C;&#x80FD;&#x5F88;&#x597D;&#x7684;&#x517C;&#x5BB9;8&#x4F4D;/16&#x4F4D;&#x5668;&#x4EF6;&#xFF1B;</li>
+<li>&#x5927;&#x91CF;&#x4F7F;&#x7528;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;<strong>&#x6307;&#x4EE4;&#x6267;&#x884C;&#x901F;&#x5EA6;&#x5FEB;</strong>&#xFF1B;</li>
+<li>&#x5927;&#x591A;&#x6570;&#x6570;&#x636E;&#x64CD;&#x4F5C;&#x90FD;&#x5728;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#x5B8C;&#x6210;&#xFF1B;</li>
+<li>&#x5BFB;&#x5740;&#x65B9;&#x5F0F;&#x7075;&#x6D3B;&#x7B80;&#x5355;&#xFF0C;&#x6267;&#x884C;&#x6548;&#x7387;&#x9AD8;&#xFF1B;</li>
+<li>&#x6307;&#x4EE4;&#x957F;&#x5EA6;&#x56FA;&#x5B9A;&#x3002;</li>
+</ol>
+<h2 class="mume-header" id="span22-arm%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E7%BB%93%E6%9E%84"><span>2.2 ARM&#x5FAE;&#x5904;&#x7406;&#x5668;&#x7ED3;&#x6784;</span></h2>
+
+<h3 class="mume-header" id="span222-arm%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E5%AF%84%E5%AD%98%E5%99%A8%E7%BB%93%E6%9E%84"><span>2.2.2 ARM&#x5FAE;&#x5904;&#x7406;&#x5668;&#x5BC4;&#x5B58;&#x5668;&#x7ED3;&#x6784;</span></h3>
+
+<p>ARM&#x5904;&#x7406;&#x5668;&#x5171;&#x6709; <strong>37</strong> &#x4E2A;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x88AB;&#x5206;&#x4E3A;&#x82E5;&#x5E72;&#x4E2A;&#x7EC4;&#xFF08;BANK&#xFF09;</p>
+<ul>
+<li><strong>31</strong> &#x4E2A;<strong>&#x901A;&#x7528;&#x5BC4;&#x5B58;&#x5668;</strong>&#xFF1B;&#xFF08;&#x5305;&#x62EC;&#x7A0B;&#x5E8F;&#x8BA1;&#x6570;&#x5668;&#xFF08;PC&#x6307;&#x9488;&#xFF09;&#xFF0C;&#x5747;&#x4E3A;32&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#xFF09;</li>
+<li><strong>6</strong> &#x4E2A;<strong>&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;</strong>&#x3002;&#xFF08;&#x7528;&#x4EE5;&#x6807;&#x8BC6;CPU&#x7684;&#x5DE5;&#x4F5C;&#x72B6;&#x6001;&#x53CA;&#x7A0B;&#x5E8F;&#x7684;&#x8FD0;&#x884C;&#x72B6;&#x6001;&#xFF0C;&#x5747;&#x4E3A;32&#x4F4D;&#x5BC4;&#x5B58;&#x5668;&#xFF09;</li>
+</ul>
+<h2 class="mume-header" id="span23-arm%E5%BE%AE%E5%A4%84%E7%90%86%E5%99%A8%E7%9A%84%E5%B7%A5%E4%BD%9C%E7%8A%B6%E6%80%81"><span>2.3 ARM&#x5FAE;&#x5904;&#x7406;&#x5668;&#x7684;&#x5DE5;&#x4F5C;&#x72B6;&#x6001;</span></h2>
+
+<blockquote>
+<p>ARM&#x5FAE;&#x5904;&#x7406;&#x5668;&#x7684;<strong>&#x5DE5;&#x4F5C;&#x72B6;&#x6001;</strong>&#x6709;<strong>&#x4E24;&#x79CD;</strong>&#xFF0C;&#x5E76;&#x53EF;&#x5728;&#x4E24;&#x79CD;&#x72B6;&#x6001;&#x4E4B;&#x95F4;&#x5207;&#x6362;</p>
+<ul>
+<li><strong>ARM&#x72B6;&#x6001;</strong>    &#x6B64;&#x65F6;&#x5904;&#x7406;&#x5668;&#x6267;&#x884C;<strong>32</strong>&#x4F4D;&#x7684;<strong>&#x5B57;&#x5BF9;&#x9F50;</strong>&#x7684;ARM&#x6307;&#x4EE4;</li>
+<li><strong>Thumb&#x72B6;&#x6001;</strong>  &#x6B64;&#x65F6;&#x5904;&#x7406;&#x5668;&#x6267;&#x884C;<strong>16</strong>&#x4F4D;&#x7684;<strong>&#x534A;&#x5B57;&#x5BF9;&#x9F50;</strong>&#x7684;Thumb&#x6307;&#x4EE4;</li>
+</ul>
+<p style="color:red">&#x6CE8;&#x610F;&#xFF1A;ARM&#x5904;&#x7406;&#x5668;&#x5728;&#x5F00;&#x59CB;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x65F6;&#xFF0C;&#x5E94;&#x5904;&#x4E8E;ARM&#x72B6;&#x6001;&#xFF01;&#xFF01;&#xFF01;</p>
+</blockquote>
+
+      </div>
+      
+      
+    
+    
+    
+    
+    
+    
+    
+    
+  
+    </body></html>
