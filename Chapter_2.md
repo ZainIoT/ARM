@@ -77,4 +77,18 @@ ARM微处理器支持7中运行模式：
 6. sys → **系统模式**：运行具有特权的操作系统任务；
 7. und → **未定义指令终止模式**：当未定义的指令执行时进入该模式，可用于支持硬件协处理器的软件仿真。
 
-<div id="diagram">Diagram will be placed here</div>
+<!-- tabs:start -->
+
+#### ** English **
+
+Hello!
+
+#### ** French **
+
+Bonjour!
+
+#### ** Italian **
+
+Ciao!
+
+<!-- tabs:end -->
