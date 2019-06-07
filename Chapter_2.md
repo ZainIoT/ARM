@@ -77,20 +77,27 @@ ARM微处理器支持7中运行模式：
 6. sys<kbd>&rarr;</kbd>**系统模式**：运行具有特权的操作系统任务；
 7. und<kbd>&rarr;</kbd>**未定义指令终止模式**：当未定义的指令执行时进入该模式，可用于支持硬件协处理器的软件仿真。
 
-```flow
-st=>start: Start|past:>http://www.google.com[blank]
-e=>end: End|future:>http://www.google.com
-op1=>operation: My Operation|past
-op2=>operation: Stuff|current
-sub1=>subroutine: My Subroutine|invalid
-cond=>condition: Yes
-or No?|approved:>http://www.google.com
-c2=>condition: Good idea|rejected
-io=>inputoutput: catch something...|future
-
-st->op1(right)->cond
-cond(yes, right)->c2
-cond(no)->sub1(left)->op1
-c2(yes)->io->e
-c2(no)->op2->e
-```
+<div id="diagram">Diagram will be placed here</div>
+<script src="flowchart.js"></script>
+<script>
+    var diagram = flowchart.parse('st=>start: Start:>http://www.google.com[blank]\n' +
+                                'e=>end:>http://www.google.com\n' +
+                                'op1=>operation: My Operation:$myFunction\n' +
+                                'op2=>operation: Stuff|current\n' +
+                                'sub1=>subroutine: My Subroutine\n' +
+                                'cond=>condition: Yes \n' + // use cond(align-next=no) to disable vertical align of symbols below
+                                'or No?\n:>http://www.google.com\n' +
+                                'c2=>condition: Good idea|rejected\n' +
+                                'io=>inputoutput: catch something...|request\n' +
+                                '\n' +
+                                'st->op1(right)->cond\n' +
+                                'cond(yes, right)->c2\n' + // conditions can also be redirected like cond(yes, bottom) or cond(yes, right)
+                                'cond(no)->sub1(left)->op1\n' + // the other symbols too...
+                                'c2(true)->io->e\n' +
+                                'c2(false)->op2->e'  //allow for true and false in conditionals
+                                );
+    diagram.drawSVG('diagram');
+    function myFunction(event, node) {
+        console.log("You just clicked this node:", node);
+    }
+</script>
